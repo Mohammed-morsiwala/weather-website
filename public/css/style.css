@@ -1,0 +1,46 @@
+body{
+    color:#333333;
+    margin: 0 auto;
+    padding:0 16px;
+    max-width: 650px;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content{
+    flex-grow: 1;
+}
+header{
+    padding-top: 16px;
+    margin-top: 16px;
+
+}
+
+footer{
+    color: #888888;
+    padding-top: 16px;
+    border-top: 1px solid #e03a3a;
+    
+}
+header a{
+    color: #888888;
+    text-decoration: none;
+    margin-left: 16px;
+}
+h1{
+    font-size: 65px;
+}
+
+img.portfolio{
+    padding-top: 16px;
+    width: 300px;
+}
+
+.error-404{
+
+    color: red;
+
+}
+    
