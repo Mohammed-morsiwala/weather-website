@@ -7,12 +7,10 @@ const forecast = (long, lat, callback)=>{
         if(error){
             callback("Can't reach to the server due to connection");
         }else if(body.error){
-            console.log(body.error);
             callback(body.error.info);
         }else{
             const country_info ={
-                current:body.current, 
-                location:body.location
+                current:body.current
             }
             callback(undefined, country_info);
         }

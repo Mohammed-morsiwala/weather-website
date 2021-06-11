@@ -7,7 +7,7 @@ const geocode = (address, callback)=>{
         if(error){
             callback("PLease check ur connection first!!!", undefined);
         }else if(response.body.features.length == 0){
-            callback("can't find the locatio!!!", undefined);
+            callback("Search for valid location!!!", undefined);
         }else{
             
             const cordinates = {

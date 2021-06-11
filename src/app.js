@@ -60,7 +60,7 @@ app.get('/weather', (req, res)=>{
                 error
             })
         }
-        forecast(long, lat, (error, {current, location} = {})=>{
+        forecast(long, lat, (error, {current} = {})=>{
                 if(error){
                     return res.send({
                         error
@@ -70,8 +70,8 @@ app.get('/weather', (req, res)=>{
                 // console.log("Current Temprature of "+ fullAddress +" :"+ current.temperature);
                 res.send({
                     address: fullAddress,
-                    forecast:"Current Temprature of "+ fullAddress +" :"+ current.temperature,
-                    location
+                    forecast:"Current Temprature of "+ fullAddress +" :"+ current.temperature+" and the windspeed is about "+current.wind_speed+"\n in the direction from "+current.wind_dir+" and standing here feels like "+current.feelslike,
+                    
                 })
             })
             

@@ -27,16 +27,16 @@ const message = document.querySelector('#message');
 weatherForm.addEventListener('submit', (event)=>{
     event.preventDefault();
     error.textContent = 'Loading......'
-    message.textContent=''
     const address = search.value;
     console.log(address) 
     fetch("/weather?address="+address) 
-    .then((response)=>{
+    .then((response)=>{ 
         console.log(response);
         response.json().then((data)=>{
             if(data.error){
                 error.textContent = data.error
             }else{
+                error.textContent = '';
                 message.textContent = data.address
                 message.textContent = data.forecast
             }
